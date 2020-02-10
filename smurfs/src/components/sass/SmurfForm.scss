@@ -1,0 +1,20 @@
+@mixin makeShadows {
+    box-shadow: 0.2rem 0.2rem 0.2rem black;
+}
+
+.SmurfForm {
+    border: 0.5rem solid black;
+    @include makeShadows;
+
+    input {
+        margin: 1%;
+        padding: 1%;
+        border: 1px solid black;
+        @include makeShadows;
+    }
+
+    button {
+        border: 1px solid black;
+        @include makeShadows;
+    }
+}

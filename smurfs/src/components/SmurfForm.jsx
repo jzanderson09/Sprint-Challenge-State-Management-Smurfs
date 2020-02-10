@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './sass/SmurfForm.scss';
 
 const SmurfForm = ({ addSmurf }) => {
     const [smurf, setSmurf] = useState({ name: '', age: '', height: '' });

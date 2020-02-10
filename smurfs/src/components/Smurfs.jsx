@@ -1,5 +1,6 @@
 import React from 'react';
 import { SmurfContext } from '../contexts/SmurfContext';
+import './sass/Smurfs.scss';
 
 import Smurf from './Smurf';
 

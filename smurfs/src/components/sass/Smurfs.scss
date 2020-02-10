@@ -1,0 +1,11 @@
+.Smurfs {
+    border: 1rem solid black;
+    margin: 3%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    h3 {
+        width: 100%;
+    }
+}

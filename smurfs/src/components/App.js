@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { SmurfContext } from '../contexts/SmurfContext';
 import axios from 'axios';
-import "./App.css";
+import "./sass/App.scss";
 
 import SmurfForm from './SmurfForm';
 import Smurfs from './Smurfs';
