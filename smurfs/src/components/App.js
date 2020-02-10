@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      smurfs: []
+      smurfs: [],
     };
   }
 
@@ -22,13 +22,13 @@ class App extends Component {
 
   addSmurf = newSmurfData => {
     axios.post('http://localhost:3333/smurfs', newSmurfData)
-    .then(res => console.log('Success:  Smurf aded!'))
+    .then(res => this.setState({ statusMessage: res }))
     .catch(err => console.log(err));
   }
   
   render() {
     return (
-      <SmurfContext.Provider value={this.state.smurfs}>
+      <SmurfContext.Provider value={this.state}>
         <div className="App">
           <h1>SMURFS! 2.0 W/ Redux</h1>
           <SmurfForm addSmurf={this.addSmurf} />

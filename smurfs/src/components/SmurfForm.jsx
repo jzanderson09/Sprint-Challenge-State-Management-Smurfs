@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './sass/SmurfForm.scss';
 
-const SmurfForm = ({ addSmurf }) => {
+const SmurfForm = ({ addSmurf, statusMessage }) => {
     const [smurf, setSmurf] = useState({ name: '', age: '', height: '' });
 
     const changeHandler = e => {
@@ -9,9 +9,14 @@ const SmurfForm = ({ addSmurf }) => {
         setSmurf({ ...smurf, [e.target.name]: e.target.value });
     }
 
+    const submitForm = e => {
+        window.alert('Success!  Smurf added!');
+        addSmurf(smurf);
+    }
+
     return (
         <div className='SmurfForm'>
-            <form onSubmit={addSmurf(smurf)}>
+            <form onSubmit={submitForm}>
                 <input 
                     name='name'
                     placeholder='Name'

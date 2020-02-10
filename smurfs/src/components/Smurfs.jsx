@@ -7,11 +7,11 @@ import Smurf from './Smurf';
 const Smurfs = () => {
     return (
         <SmurfContext.Consumer>
-            {smurfData => {
+            {state => {
                 return (
                     <div className='Smurfs'>
                         <h3>Here are the smurfs:</h3>
-                        {smurfData.map(smurf => <Smurf smurf={smurf} /> )}
+                        {state.smurfs.map(smurf => <Smurf key={smurf.name} smurf={smurf} /> )}
                     </div>
                 );
             }}
